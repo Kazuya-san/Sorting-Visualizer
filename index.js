@@ -4,9 +4,9 @@ let bars_container = document.getElementById("bars_container");
 let select_algo = document.getElementById("algo");
 let speed = document.getElementById("speed");
 let minRange = 1;
-let maxRange = 100;
-let numOfBars = 100;
-let heightFactor = 6.5;
+let maxRange = 1200;
+let numOfBars = 1200;
+let heightFactor = 0.4;
 let speedFactor = 100;
 let unsorted_array = new Array(numOfBars);
 
@@ -148,6 +148,9 @@ sort_btn.addEventListener("click", function () {
   switch (algotouse) {
     case "bubble":
       bubbleSort(unsorted_array);
+      break;
+    case "merge":
+      console.log(mergeSort(unsorted_array));
       break;
     case "quick":
       quickSort(unsorted_array, 0, unsorted_array.length - 1);

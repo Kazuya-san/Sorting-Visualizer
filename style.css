@@ -23,10 +23,8 @@
 }
 
 .bar{
-    width: 10px;
+    width: 1.2px;
     background-color: aqua;
-    margin: 0 2px;
-    transition: height 0.5s ease-in-out;
     border-radius: 2px;
 }
 
@@ -46,7 +44,6 @@ body{
     text-align: center;
     transition:  0.2s ease-in-out;
 }
-
 
 button:hover{
     background-color: #56697b;
