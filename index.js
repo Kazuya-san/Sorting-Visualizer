@@ -7,7 +7,7 @@ let minRange = 1;
 let maxRange = 1200;
 let numOfBars = 1200;
 let heightFactor = 0.4;
-let speedFactor = 100;
+let speedFactor = 10; //100;
 let unsorted_array = new Array(numOfBars);
 
 speed.addEventListener("change", (e) => {
@@ -156,7 +156,8 @@ sort_btn.addEventListener("click", function () {
       quickSort(unsorted_array, 0, unsorted_array.length - 1);
       break;
     default:
-      bubbleSort(unsorted_array);
+      // bubbleSort(unsorted_array);
+      quickSort(unsorted_array, 0, unsorted_array.length - 1);
       break;
   }
 });
