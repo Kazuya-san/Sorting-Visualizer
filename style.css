@@ -23,8 +23,9 @@
 }
 
 .bar{
-    width: 1.2px;
+    width: 10px;
     background-color: aqua;
+    /* margin: 0 2px; */
     border-radius: 2px;
 }
 
