@@ -16,7 +16,7 @@ slider.addEventListener("input", function () {
   maxRange = slider.value;
   //console.log(numOfBars);
   bars_container.innerHTML = "";
-  createRandomArray();
+  unsorted_array = createRandomArray();
   renderBars(unsorted_array);
 });
 
@@ -35,13 +35,16 @@ function randomNum(min, max) {
 }
 
 function createRandomArray() {
+  let array = new Array(numOfBars);
   for (let i = 0; i < numOfBars; i++) {
-    unsorted_array[i] = randomNum(minRange, maxRange);
+    array[i] = randomNum(minRange, maxRange);
   }
+
+  return array;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  createRandomArray();
+  unsorted_array = createRandomArray();
   renderBars(unsorted_array);
 });
 
@@ -369,6 +372,8 @@ sort_btn.addEventListener("click", function () {
       InsertionSort(unsorted_array);
       break;
     case "quick":
+      console.log(unsorted_array.length);
+
       quickSort(unsorted_array, 0, unsorted_array.length - 1);
       break;
     default:
