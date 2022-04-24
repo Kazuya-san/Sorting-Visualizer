@@ -58,7 +58,7 @@ function renderBars(array) {
 }
 
 randomize_array.addEventListener("click", function () {
-  createRandomArray();
+  unsorted_array = createRandomArray();
   bars_container.innerHTML = "";
   renderBars(unsorted_array);
 });
